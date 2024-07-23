@@ -5,10 +5,19 @@
   </head>
   <body>
     <p>Cart Quantity</p>
-    <button onclick="console.log(`Cart Quantity: ${cartQuantity}`)">
+    <button
+      onclick="
+      console.log(`Cart Quantity: ${cartQuantity}
+      `);
+      "
+    >
       Show Quantity
     </button>
-    <button>Add to Cart</button>
+    <button
+      onclick="console.log(`Cart Quantity: ${cartQuantity = cartQuantity + 1}`)"
+    >
+      Add to Cart
+    </button>
     <button>+2</button>
     <button>+3</button>
     <button>Reset Cart</button>
