@@ -1,41 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML CSS Review</title>
-    <style>
-      /*
-        This is a comment.
-      */
-      .red-button {
-        background-color: red;
-        color: white;
-        border: none;
-      }
-      .yellow-button {
-        background-color: yellow;
-      }
-    </style>
+    <title>Variables</title>
   </head>
   <body>
-    <!--
-      This is a comment.
-    -->
-    <button title="Good job!" class="red-button" onclick="alert('Good job!')">
-      hello
-    </button>
-    <p>paragraph of <button class="yellow-button">hello</button>text</p>
-
     <script>
-      //This is a comment.
-      //This code creates a popup.
-      //alert("hello");
-      /*
-        multi
-        line
-        comment
-      */
-      console.log(2 + 2);
-      console.log("some" + "text");
+      let variable1 = 3;
+      console.log(variable1);
+
+      let calculation = 2 + 2;
+      console.log(calculation);
+      console.log(calculation + 2);
+
+      let result = calculation + 2;
+      console.log(result);
+
+      let message = "hello";
+      console.log(message);
+      console.log(";");
+
+      variable1 = 5;
+      console.log(variable1);
+
+      variable1 = variable1 + 1;
+      console.log(variable1);
     </script>
   </body>
 </html>
