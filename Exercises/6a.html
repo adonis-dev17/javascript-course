@@ -8,14 +8,22 @@
   <body>
     <script>
       // a script that will prompt you based on the 24-hour format hour of the day
-      const name = "Pogi";
-      let hour = prompt("Enter hour (0-23):");
-      if (hour >= 6 && hour <= 12) {
-        console.log(`Good morning, ${name}!`);
-      } else if (hour >= 13 && hour <= 17) {
-        console.log(`Good afternoon, ${name}!`);
+      // const name = "Pogi";
+      // let hour = prompt("Enter hour (0-23):");
+      // if (hour >= 6 && hour <= 12) {
+      //   console.log(`Good morning, ${name}!`);
+      // } else if (hour >= 13 && hour <= 17) {
+      //   console.log(`Good afternoon, ${name}!`);
+      // } else {
+      //   console.log(`Good night, ${name}!`);
+      // }
+
+      // a script that will log discount if age is 6 and less or 65 and beyond
+      let age = prompt("Enter your age:");
+      if (age <= 6 || age >= 65) {
+        console.log("Discount");
       } else {
-        console.log(`Good night, ${name}!`);
+        console.log("No discount");
       }
     </script>
   </body>
