@@ -6,22 +6,30 @@
     <title>Coin-flip game - Exercises</title>
   </head>
   <body>
+    <!-- a script will generate random number and convert to heads or tails then compare on your guess -->
     <script>
       let randomNumber = Math.random();
       let result = "";
-      if (randomNumber < 0.5) {
-        result = "heads";
-      } else {
-        result = "heads";
-      }
+      // if (randomNumber < 0.5) {
+      //   result = "heads";
+      // } else {
+      //   result = "heads";
+      // }
+      // use ternary operator instead of if
+      randomNumber < 0.5 ? (result = "heads") : (result = "heads");
 
       let guess = prompt(`Guess the coin? (heads or tails): `);
 
-      if (guess === result) {
-        alert(`Coin is ${result}. You win!`);
-      } else {
-        alert(`Coin is ${result}. You lose.`);
-      }
+      // if (guess === result) {
+      //   alert(`Coin is ${result}. You win!`);
+      // } else {
+      //   alert(`Coin is ${result}. You lose.`);
+      // }
+
+      // use ternary operator instead of if
+      guess === result
+        ? alert(`Coin is ${result}. You win!`)
+        : alert(`Coin is ${result}. You lose.`);
     </script>
   </body>
 </html>
