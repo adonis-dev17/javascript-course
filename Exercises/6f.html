@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin-flip game - Exercises</title>
+  </head>
+  <body>
+    <script>
+      let randomNumber = Math.random();
+      let result = "";
+      if (randomNumber < 0.5) {
+        result = "heads";
+      } else {
+        result = "heads";
+      }
+
+      let guess = prompt(`Guess the coin? (heads or tails): `);
+
+      if (guess === result) {
+        alert(`Coin is ${result}. You win!`);
+      } else {
+        alert(`Coin is ${result}. You lose.`);
+      }
+    </script>
+  </body>
+</html>
