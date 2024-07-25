@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans and If-Statements Exercises</title>
+  </head>
+  <body>
+    <script>
+      // a script that will prompt you based on the 24-hour format hour of the day
+      const name = "Pogi";
+      let hour = prompt("Enter hour (0-23):");
+      if (hour >= 6 && hour <= 12) {
+        console.log(`Good morning, ${name}!`);
+      } else if (hour >= 13 && hour <= 17) {
+        console.log(`Good afternoon, ${name}!`);
+      } else {
+        console.log(`Good night, ${name}!`);
+      }
+    </script>
+  </body>
+</html>
