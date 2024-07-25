@@ -19,8 +19,11 @@
       // }
 
       // a script that will log discount if age is 6 and less or 65 and beyond
+
       let age = prompt("Enter your age:");
-      if (age <= 6 || age >= 65) {
+      let isHoliday = prompt("Is today a holiday (yes/no):");
+
+      if ((age <= 6 || age >= 65) && isHoliday === "no") {
         console.log("Discount");
       } else {
         console.log("No discount");
