@@ -15,31 +15,36 @@
     </button>
     <button
       onclick="
-    cartQuantity === 10 ? console.log('The cart is full') : console.log(`Cart quantity: ${++cartQuantity}`)"
+      cartQuantity = cartQuantity + 1; 
+      cartQuantity <= 10 ? console.log(`Cart quantity: ${cartQuantity}`): console.log('The cart is full', cartQuantity = cartQuantity -1); "
     >
       Add to Cart
     </button>
     <button
       onclick="
-    cartQuantity === 10 ? console.log('The cart is full') : console.log(`Cart quantity: ${cartQuantity += 2}`)"
+    cartQuantity = cartQuantity + 2; 
+    cartQuantity <= 10 ? console.log(`Cart quantity: ${cartQuantity}`): console.log('The cart is full', cartQuantity = cartQuantity -2);"
     >
       +2
     </button>
     <button
       onclick="
-    cartQuantity === 10 ? console.log('The cart is full') : console.log(`Cart quantity: ${cartQuantity += 3}`)"
+    cartQuantity = cartQuantity + 3; 
+    cartQuantity <= 10 ? console.log(`Cart quantity: ${cartQuantity}`): console.log('The cart is full', cartQuantity = cartQuantity -3);"
     >
       +3
     </button>
     <button
       onclick="
-    cartQuantity === 10 ? console.log('The cart is full') : console.log(`Cart quantity: ${cartQuantity += 4}`)"
+    cartQuantity = cartQuantity + 4; 
+    cartQuantity <= 10 ? console.log(`Cart quantity: ${cartQuantity}`): console.log('The cart is full', cartQuantity = cartQuantity -4);"
     >
       +4
     </button>
     <button
       onclick="
-    cartQuantity === 10 ? console.log('The cart is full') : console.log(`Cart quantity: ${cartQuantity += 5}`)"
+    cartQuantity = cartQuantity + 5; 
+    cartQuantity <= 10 ? console.log(`Cart quantity: ${cartQuantity}`): console.log('The cart is full', cartQuantity = cartQuantity -5);"
     >
       +5
     </button>
