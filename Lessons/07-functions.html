@@ -15,12 +15,25 @@
       // function1();
       // function1();
 
-      function calculateTax(cost, taxPercent = 0.1) {
-        console.log(cost * taxPercent);
-      }
+      // function calculateTax(cost, taxPercent = 0.1) {
+      //   console.log(cost * taxPercent);
+      // }
 
-      calculateTax(2000, 0.2);
-      calculateTax(5000);
+      // calculateTax(2000, 0.2);
+      // calculateTax(5000);
+
+      const person = personDetails();
+      console.log(person.name);
+      console.log(person.age);
+      console.log(person.city);
+
+      function personDetails() {
+        return {
+          name: "Adonis Medrocillo",
+          age: 45,
+          city: "Iloilo City",
+        };
+      }
     </script>
   </body>
 </html>
