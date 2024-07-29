@@ -18,7 +18,7 @@
     </p>
 
     <script>
-      const product2 = {
+      /*const product2 = {
         name: "Roblox",
         ["game-title"]: "Pillgrammed",
         ["player-count"]: {
@@ -31,6 +31,53 @@
 
       console.log(JSON.stringify(product2));
       console.log(JSON.parse(JSON.stringify(product2)));
+      */
+      const object1 = {
+        name: "hello",
+      };
+      console.log(object1.name);
+
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      const object2 = object1;
+      console.log(object2);
+
+      object1.name = "Good morning!";
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        name: "Good morning!",
+      };
+      console.log(object3);
+
+      console.log(object3 === object1);
+      console.log(object2 === object1);
+
+      const object4 = {
+        message: "Hello World!",
+        price: 799,
+      };
+
+      const { message, price } = object4;
+      // const message = object4.message;
+      console.log(message);
+      console.log(price);
+
+      // These are shortcuts
+      const object5 = {
+        // message: message,
+        message,
+        // method: function function1() {
+        //   console.log("method");
+        // },
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(object5);
+      object5.method();
     </script>
   </body>
 </html>
