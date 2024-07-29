@@ -6,24 +6,40 @@
     <title>Coin-flip game - Exercises</title>
   </head>
   <body>
-    <button
-      onclick="playGame('heads');
-      
-      "
-    >
-      heads
-    </button>
+    <h1>Coin Flip Game</h1>
+    <p>Guess: heads or tails</p>
+    <button onclick="playGame('heads');">heads</button>
     <button onclick="playGame('tails')">tails</button>
+    <button
+      onclick="
+    score.wins = 0;
+    score.losses = 0;
+    localStorage.removeItem('score');
+    "
+    >
+      Reset Score
+    </button>
 
     <!-- a script will generate random number and convert to heads or tails then compare on your guess -->
     <script>
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+      };
+      alert(`Last Game\nWins: ${score.wins}, Losses: ${score.losses}`);
+
       function playGame(guess) {
         let randomNumber = Math.random();
         randomNumber < 0.5 ? (result = "heads") : (result = "tails");
 
-        guess === result
-          ? alert(`Coin is ${result}. You win!`)
-          : alert(`Coin is ${result}. You lose.`);
+        if (guess === result) {
+          score.wins += 1;
+        } else {
+          score.losses += 1;
+        }
+        localStorage.setItem("score", JSON.stringify(score));
+
+        alert(`Wins: ${score.wins}, Losses: ${score.losses}`);
       }
     </script>
   </body>
