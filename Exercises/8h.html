@@ -73,7 +73,8 @@
     </p>
 
     <script>
-      let calculation = "";
+      let calculation = JSON.parse(localStorage.getItem("calculation")) || 0;
+      console.log(calculation);
 
       function saveMemory() {
         localStorage.setItem("calculation", JSON.stringify(calculation));
