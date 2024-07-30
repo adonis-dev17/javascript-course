@@ -6,29 +6,33 @@
     <title>DOM</title>
   </head>
   <body>
-    <button>hello</button>
+    <button>Hello</button>
     <button class="js-button">Second button</button>
+
     <script>
+      //  methods
+      console.log(document.querySelector("button"));
+      1;
       console.log(document.querySelector("button").innerHTML);
-      document.querySelector("button").innerHTML = "Changed";
+      document.querySelector("button").innerHTML = "Good day!";
+
+      console.log(document.querySelector(".js-button"));
+
       const buttonElement = document.querySelector(".js-button");
       console.log(buttonElement);
 
-      /*
-      console.log(document.title);
-      document.title = "Changed";
+      // properties
+      // console.log(document.title);
+      // console.log(document.body);
 
-      console.log(document.body);
-      console.log(typeof document.body);
+      // document.title = "Changed!";
 
-      console.log(document.body.innerHTML);
-      document.body.innerHTML = "<button>Good job!</button>";
-      */
+      // console.log(document.body.innerHTML);
 
-      /*
-      document.body.innerHTML = "hello";
-      document.title = "Good job!";
-      */
+      // document.body.innerHTML = "<button>Mighty button</button> ";
+
+      // document.body.innerHTML = "Heyo!";
+      // document.title = "Good job!";
     </script>
   </body>
 </html>
