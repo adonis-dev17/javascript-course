@@ -89,7 +89,7 @@
 
     <p class="js-display-quantity"></p>
     <script>
-      let cartQuantity = 0;
+      let cartQuantity = JSON.parse(localStorage.getItem("cartQuantity"));
       let display = document.querySelector(".js-display-quantity");
 
       function showQuantity() {
@@ -102,6 +102,7 @@
           cartQuantity = 10;
           display.innerHTML = `Cart is full!\nCart quantity: ${cartQuantity}`;
         }
+        localStorage.setItem("cartQuantity", JSON.stringify(cartQuantity));
       }
     </script>
   </body>
