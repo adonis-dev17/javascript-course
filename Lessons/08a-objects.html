@@ -77,23 +77,60 @@
       console.log(object5);
       object5.method();
 
-      const mouse = {
-        brand: "Logitech",
-        type: "laser",
-        color: "space grey",
-        size: "small",
-        pointer() {
-          console.log("points object in the screen");
-        },
-        hover() {
+      //const mouse = {
+      //  brand: "Logitech",
+      //  type: "laser",
+      //  color: "space grey",
+      //  size: "small",
+      //  pointer() {
+      //    console.log("points object in the screen");
+      //  },
+      //  hover() {
+      //    console.log("hovers object in the screen");
+      //  },
+      //  click() {
+      //    console.log("clicks object in the screen");
+      //  }
+      //};
+      /*using constructors*/
+      function Mouse(MouseBrand, MouseType, MouseColor, MouseSize) {
+        this.brand = MouseBrand;
+        this.type = MouseType;
+        this.color = MouseColor;
+        this.size = MouseSize;
+        this.hover = function () {
           console.log("hovers object in the screen");
-        },
-        click() {
+        };
+        this.pointer = function () {
+          console.log("points object in the screen");
+        };
+        this.click = function () {
           console.log("clicks object in the screen");
-        }
-      };
-      
-      
+        };
+      }
+      let logiTech = new Mouse("Logitech", "laser", "space grey", "small");
+      let appleMouse = new Mouse("Apple", "laser", "white", "medium");
+
+      /*using constructors for streetfighter*/
+
+      function StreetFighter(character, origin, art, skill) {
+        this.character = character;
+        this.origin = origin;
+        this.art = art;
+        this.skill = skill;
+        this.punch = function () {
+          console.log("left straight, solid right");
+        };
+        this.kick = function () {
+          console.log("round-house kick");
+        };
+        this.specialSkill = function () {
+          console.log("chi defense");
+        };
+          }
+        let ryuKin = new StreetFighter("Ryu", "Japan", "Karatedo", "Fireball");
+        let chunLi = new StreetFighter("Chun Li", "China", "ninjatsu", "whirlwind kick");
+    
     </script>
   </body>
 </html>
