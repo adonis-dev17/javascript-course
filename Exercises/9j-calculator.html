@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <p>Simple Calculator</p>
+    <!-- first set of buttons put inside the p -->
+
+    <p class="js-display"></p>
+
+    <p>
+      <button
+        onclick="
+        calculation += '1';
+        displayNumbers()
+        
+      "
+      >
+        1
+      </button>
+      <button
+        onclick="
+        calculation += '2';
+        displayNumbers()"
+      >
+        2
+      </button>
+
+      <button
+        onclick="
+        calculation += '3';
+        displayNumbers()
+        "
+      >
+        3
+      </button>
+
+      <button
+        onclick="
+        calculation += ' + '
+        displayNumbers()
+      "
+      >
+        +
+      </button>
+    </p>
+
+    <!-- second set of buttons put inside the p -->
+    <p>
+      <button
+        onclick="
+        calculation += '4';
+        displayNumbers()
+      "
+      >
+        4
+      </button>
+
+      <button
+        onclick="
+        calculation += '5';
+        displayNumbers()      
+    "
+      >
+        5
+      </button>
+
+      <button
+        onclick="
+        calculation += '6';
+        displayNumbers()
+      "
+      >
+        6
+      </button>
+
+      <button
+        onclick="
+        calculation += ' - '
+        displayNumbers()
+      "
+      >
+        -
+      </button>
+    </p>
+
+    <!-- third set of buttons put inside the p -->
+    <p>
+      <button
+        onclick="
+        calculation += '7';
+        displayNumbers()
+      "
+      >
+        7
+      </button>
+
+      <button
+        onclick="
+        calculation += '8';
+        displayNumbers()
+      "
+      >
+        8
+      </button>
+
+      <button
+        onclick="
+      calculation += '9';
+      displayNumbers()
+      "
+      >
+        9
+      </button>
+
+      <button
+        onclick="
+        calculation += ' * ';
+        displayNumbers()
+      "
+      >
+        *
+      </button>
+    </p>
+
+    <!-- fourth set of buttons put inside the p -->
+    <p>
+      <button
+        onclick="
+        calculation += '0';
+        displayNumbers()
+      "
+      >
+        0
+      </button>
+
+      <button
+        onclick="
+        calculation += '.';
+        displayNumbers()
+      "
+      >
+        .
+      </button>
+
+      <button
+        onclick="
+        calculation = eval(calculation);
+        displayNumbers()
+      "
+      >
+        =
+      </button>
+
+      <button
+        onclick="
+        calculation += ' / '
+        displayNumbers()
+      "
+      >
+        /
+      </button>
+    </p>
+
+    <!-- fourth set of buttons put inside the p -->
+    <p>
+      <button
+        onclick="
+        showMemory();
+        displayNumbers();
+        
+      "
+      >
+        MR
+      </button>
+
+      <button
+        onclick="
+        saveMemory();  
+      "
+      >
+        M+
+      </button>
+
+      <button
+        onclick="flushMemory();
+      "
+      >
+        M-
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+        calculation = '';
+        displayNumbers();
+        "
+      >
+        clear
+      </button>
+    </p>
+
+    <script>
+      let calculation = JSON.parse(localStorage.getItem("calculation")) || 0;
+
+      function saveMemory() {
+        localStorage.setItem("calculation", JSON.stringify(calculation));
+      }
+
+      function showMemory() {
+        calculation = JSON.parse(localStorage.getItem("calculation")) || "";
+      }
+
+      function flushMemory() {
+        localStorage.removeItem("calculation");
+      }
+
+      function displayNumbers() {
+        let display = document.querySelector(".js-display");
+        display.innerHTML = `${calculation}`;
+      }
+    </script>
+  </body>
+</html>
