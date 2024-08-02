@@ -15,7 +15,36 @@
     >
       Subscribe
     </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input
+      class="js-input-cost"
+      placeholder="Cost of order"
+      onkeydown="hamdleCostKeydown()"
+    />
+    <button
+      onclick="
+      calculateTotal();
+    "
+    >
+      Calculate
+    </button>
+    <p class="js-total-cost"></p>
     <script>
+      function hamdleCostKeydown() {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-input-cost");
+        let cost = Number(inputElement.value);
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+      }
       function subscribe() {
         const buttonElement = document.querySelector(".js-subscribe-button");
         if (buttonElement.innerText === "Subscribe") {
