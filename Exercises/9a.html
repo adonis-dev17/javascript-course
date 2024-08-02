@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model - Exercises</title>
+  </head>
+  <body>
+    <button
+      onclick="
+      console.log(document.querySelector('button'));
+      "
+    >
+      9a
+    </button>
+
+    <button
+      class="js-9b-button"
+      onclick="
+      document.querySelector('.js-9b-button').innerHTML = '9b done!'
+      "
+    >
+      9b
+    </button>
+
+    <button
+      class="js-heads-button"
+      onclick="
+      document.querySelector('.js-you-choose').innerHTML = 'You chose: heads'
+    "
+    >
+      heads
+    </button>
+    <button
+      class="js-tails-button"
+      onclick="
+      document.querySelector('.js-you-choose').innerHTML = `You chose: tails`
+    "
+    >
+      tails
+    </button>
+    <p class="js-you-choose"></p>
+
+    <input
+      type="text"
+      placeholder="Name"
+      class="js-input"
+      onkeydown="
+      if (event.key === 'Enter') {
+        displayName();
+      }
+    "
+    />
+    <button
+      class="js-submit-button"
+      onclick="
+      displayName();
+    "
+    >
+      Submit
+    </button>
+    <p class="js-your-name"></p>
+    <script>
+      function displayName() {
+        const name = document.querySelector(".js-input");
+        document.querySelector(
+          ".js-your-name"
+        ).innerHTML = `Your name is ${name.value}`;
+      }
+    </script>
+  </body>
+</html>
