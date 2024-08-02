@@ -60,6 +60,17 @@
       Submit
     </button>
     <p class="js-your-name"></p>
+
+    <input
+      type="text"
+      onkeyup="
+      let text = event.key
+      
+      
+      document.querySelector('.js-update-text').innerHTML += text ;
+    "
+    />
+    <p class="js-update-text"></p>
     <script>
       function displayName() {
         const name = document.querySelector(".js-input");
