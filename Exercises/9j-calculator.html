@@ -148,6 +148,7 @@
         onclick="
         calculation = eval(calculation);
         displayNumbers()
+        
       "
       >
         =
@@ -209,7 +210,7 @@
       }
 
       function showMemory() {
-        calculation = JSON.parse(localStorage.getItem("calculation")) || "";
+        calculation = JSON.parse(localStorage.getItem("calculation")) || 0;
       }
 
       function flushMemory() {
