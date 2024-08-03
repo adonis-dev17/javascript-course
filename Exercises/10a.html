@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML, CSS, and JavaScript Together - Exercises</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .amazon-button {
+        font-size: 17px;
+        padding: 8px 30px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(255, 216, 20);
+        cursor: pointer;
+      }
+
+      .request-button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .schedule-later {
+        background-color: rgb(230, 230, 230);
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .on-off-button1,
+      .on-off-button2,
+      .on-off-button3 {
+        border: none;
+        background-color: lightgray;
+        color: white;
+        font-size: 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .is-toggled {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Amazon button</p>
+    <button class="amazon-button">Add to Cart</button>
+
+    <p>Uber buttons</p>
+    <button class="request-button">Request now</button>
+    <button class="schedule-later">Schedule for later</button>
+
+    <button class="js-button">Test</button>
+
+    <button
+      class="on-off-button1"
+      onclick="
+        const buttonElement1 = document.querySelector('.on-off-button1');
+
+        if (!buttonElement1.classList.contains('is-toggled')) {
+          buttonElement1.classList.add('is-toggled');
+        } else {
+          buttonElement1.classList.remove('is-toggled');
+        }
+    "
+    >
+      Gaming
+    </button>
+
+    <button
+      class="on-off-button2"
+      onclick="
+        const buttonElement2 = document.querySelector('.on-off-button2');
+        if (!buttonElement2.classList.contains('is-toggled')) {
+          buttonElement2.classList.add('is-toggled');
+        } else {
+          buttonElement2.classList.remove('is-toggled');
+        }
+  "
+    >
+      Music
+    </button>
+
+    <button
+      class="on-off-button3"
+      onclick="
+        const buttonElement3 = document.querySelector('.on-off-button3');
+        if (!buttonElement3.classList.contains('is-toggled')) {
+          buttonElement3.classList.add('is-toggled');
+        } else {
+          buttonElement3.classList.remove('is-toggled');
+        }
+  "
+    >
+      Tech
+    </button>
+
+    <script>
+      const buttonElement = document.querySelector(".js-button");
+      console.log(buttonElement.classList.contains("js-button"));
+
+      function toggleOnOff() {
+        const buttonElement = document.querySelector(".on-off-button");
+        if (!buttonElement.classList.contains("is-toggled")) {
+          buttonElement.classList.add("is-toggled");
+        } else {
+          buttonElement.classList.remove("is-toggled");
+        }
+      }
+    </script>
+  </body>
+</html>
