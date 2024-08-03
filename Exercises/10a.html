@@ -64,22 +64,23 @@
     <button class="js-button">Test</button>
 
     <button
-      class="on-off-button1"
+      class="on-off-button1 js-button"
       onclick="
         const buttonElement1 = document.querySelector('.on-off-button1');
-
         if (!buttonElement1.classList.contains('is-toggled')) {
           buttonElement1.classList.add('is-toggled');
         } else {
           buttonElement1.classList.remove('is-toggled');
         }
+
+       
     "
     >
       Gaming
     </button>
 
     <button
-      class="on-off-button2"
+      class="on-off-button2 js-button"
       onclick="
         const buttonElement2 = document.querySelector('.on-off-button2');
         if (!buttonElement2.classList.contains('is-toggled')) {
@@ -93,7 +94,7 @@
     </button>
 
     <button
-      class="on-off-button3"
+      class="on-off-button3 js-button"
       onclick="
         const buttonElement3 = document.querySelector('.on-off-button3');
         if (!buttonElement3.classList.contains('is-toggled')) {
