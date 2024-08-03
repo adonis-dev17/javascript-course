@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="/Exercises/10i-calculator.css" />
+  </head>
+  <body>
+    <p>Simple Calculator</p>
+    <!-- first set of buttons put inside the p -->
+
+    <p class="js-display"></p>
+
+    <p>
+      <button
+        onclick="
+        calculation += '1';
+        displayNumbers()
+        
+      "
+      >
+        1
+      </button>
+      <button
+        onclick="
+        calculation += '2';
+        displayNumbers()"
+      >
+        2
+      </button>
+
+      <button
+        onclick="
+        calculation += '3';
+        displayNumbers()
+        "
+      >
+        3
+      </button>
+
+      <button
+        class="plus"
+        onclick="
+        calculation += ' + '
+        displayNumbers()
+      "
+      >
+        +
+      </button>
+    </p>
+
+    <!-- second set of buttons put inside the p -->
+    <p>
+      <button
+        onclick="
+        calculation += '4';
+        displayNumbers()
+      "
+      >
+        4
+      </button>
+
+      <button
+        onclick="
+        calculation += '5';
+        displayNumbers()      
+    "
+      >
+        5
+      </button>
+
+      <button
+        onclick="
+        calculation += '6';
+        displayNumbers()
+      "
+      >
+        6
+      </button>
+
+      <button
+        class="minus"
+        onclick="
+        calculation += ' - '
+        displayNumbers()
+      "
+      >
+        -
+      </button>
+    </p>
+
+    <!-- third set of buttons put inside the p -->
+    <p>
+      <button
+        onclick="
+        calculation += '7';
+        displayNumbers()
+      "
+      >
+        7
+      </button>
+
+      <button
+        onclick="
+        calculation += '8';
+        displayNumbers()
+      "
+      >
+        8
+      </button>
+
+      <button
+        onclick="
+      calculation += '9';
+      displayNumbers()
+      "
+      >
+        9
+      </button>
+
+      <button
+        class="times"
+        onclick="
+        calculation += ' * ';
+        displayNumbers()
+      "
+      >
+        *
+      </button>
+    </p>
+
+    <!-- fourth set of buttons put inside the p -->
+    <p>
+      <button
+        onclick="
+        calculation += '0';
+        displayNumbers()
+      "
+      >
+        0
+      </button>
+
+      <button
+        class="point"
+        onclick="
+        calculation += '.';
+        displayNumbers()
+      "
+      >
+        .
+      </button>
+
+      <button
+        onclick="
+        calculation = eval(calculation);
+        displayNumbers()
+        
+      "
+      >
+        =
+      </button>
+
+      <button
+        class="divide"
+        onclick="
+        calculation += ' / '
+        displayNumbers()
+      "
+      >
+        /
+      </button>
+    </p>
+
+    <!-- fourth set of buttons put inside the p -->
+    <p>
+      <button
+        class="mr"
+        onclick="
+        showMemory();
+        displayNumbers();
+        
+      "
+      >
+        MR
+      </button>
+
+      <button
+        class="m-plus"
+        onclick="
+        saveMemory();  
+      "
+      >
+        M+
+      </button>
+
+      <button
+        class="m-minus"
+        onclick="flushMemory();
+      "
+      >
+        M-
+      </button>
+      <button
+        class="clear"
+        onclick="
+        calculation = '';
+        displayNumbers();
+        "
+      >
+        clear
+      </button>
+    </p>
+
+    <script src="/Exercises/10i.calculator.js"></script>
+  </body>
+</html>
