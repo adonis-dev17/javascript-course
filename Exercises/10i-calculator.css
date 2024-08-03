@@ -7,13 +7,21 @@ body {
 
 button {
   font-size: 30px;
-  padding: 4% 6%;
+  padding: 20px 25px;
   border-radius: 50px;
   background-color: rgb(44, 43, 43);
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.15s, box-shadow 0.15s, color 0.15s;
 }
+
+button:hover {
+  background-color: rgb(210, 186, 235);
+  box-shadow: 10px 10px 10px 10px rgba(55, 54, 54, 0.5);
+  color: rgb(19, 19, 19);
+}
+
 .plus,
 .minus,
 .times,
