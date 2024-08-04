@@ -5,6 +5,14 @@ body {
   font-size: 30px;
 }
 
+.js-display {
+  font-size: 36px;
+}
+.js-display:hover {
+  box-shadow: 10px 10px 10px 10px rgba(20, 155, 234, 0.5);
+  color: rgb(119, 21, 241);
+}
+
 button {
   font-size: 30px;
   padding: 20px 25px;
@@ -13,7 +21,10 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  transition: background-color 0.15s, box-shadow 0.15s, color 0.15s;
+  transition:
+    background-color 0.15s,
+    box-shadow 0.15s,
+    color 0.15s;
 }
 
 button:hover {
@@ -32,19 +43,19 @@ button:hover {
 .times,
 .divide,
 .point {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 29px;
+  padding-right: 33px;
 }
 .mr,
 .m-plus,
 .m-minus,
 .clear {
   font-size: 15px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-radius: 100px;
   background-color: rgb(141, 13, 19);
 }
 .clear {
-  padding: 22px 15px;
+  padding: 25px 18px;
 }
