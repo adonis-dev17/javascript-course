@@ -124,6 +124,7 @@
       console.log(addNum([-2, -1, 0, 99], 2));
       */
 
+      /*
       //Create a function that takes 2 arrays of numbers and add each number in the arrays together;
 
       function addArrays(array1, array2) {
@@ -137,6 +138,22 @@
 
       addArrays([1, 1, 2], [1, 1, 3]);
       addArrays([1, 2, 3], [4, 5, 6]);
+      */
+
+      //Create a function that takes an array of numbers and returns how many numbers in the array are greater than 0.
+      function countPositive(nums) {
+        let count = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] > 0) {
+            count++;
+          }
+        }
+        console.log(`countPositive([${nums}]) => ${count}`);
+      }
+
+      countPositive([1, -3, 5]);
+      countPositive([-2, 3, -5, 7, 10]);
     </script>
   </body>
 </html>
