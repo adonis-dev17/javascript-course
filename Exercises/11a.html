@@ -25,7 +25,20 @@
       console.log(getLastValue([true, false]));
       */
 
-      // Create a funct
+      // Create a function that takes an array and returns an array where the first and last values are swapped
+
+      function arraySwap(array) {
+        const firstVal = array[0];
+        const lastVal = array[array.length - 1];
+
+        array[0] = lastVal;
+        array[array.length - 1] = firstVal;
+        return array;
+      }
+
+      console.log(arraySwap([1, 2, 3, 4, 5]));
+      console.log(arraySwap([true, false]));
+      console.log(arraySwap(["crawl", "walk", "run"]));
     </script>
   </body>
 </html>
