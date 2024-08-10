@@ -89,6 +89,7 @@
       console.log(newArray);
       */
 
+      /*
       //Create a function that takes an array of numbers and returns an array with each number is increased by 1
 
       function addOne(array) {
@@ -102,6 +103,24 @@
 
       console.log(addOne([1, 2, 3, 4, 5, 6]));
       console.log(addOne([-1, -2, -3, -4, -5, -6]));
+      console.log(addOne([-2, -1, 0, 99]));
+      */
+
+      //Create a function that takes an array of numbers and returns an array where each numbers is increased by 'num'
+
+      function addNum(array, num) {
+        let ramArray = [];
+        for (let i = 0; i < array.length; i++) {
+          let increase = array[i] + num;
+          ramArray.push(increase);
+        }
+        array = ramArray;
+        return array;
+      }
+
+      console.log(addNum([1, 2, 3], 2));
+      console.log(addNum([1, 2, 3], 3));
+      console.log(addNum([-2, -1, 0, 99], 2));
     </script>
   </body>
 </html>
