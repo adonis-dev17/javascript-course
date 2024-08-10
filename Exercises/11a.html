@@ -106,6 +106,7 @@
       console.log(addOne([-2, -1, 0, 99]));
       */
 
+      /*
       //Create a function that takes an array of numbers and returns an array where each numbers is increased by 'num'
 
       function addNum(array, num) {
@@ -121,6 +122,21 @@
       console.log(addNum([1, 2, 3], 2));
       console.log(addNum([1, 2, 3], 3));
       console.log(addNum([-2, -1, 0, 99], 2));
+      */
+
+      //Create a function that takes 2 arrays of numbers and add each number in the arrays together;
+
+      function addArrays(array1, array2) {
+        let virtualArray = [];
+        for (let i = 0; i < array1.length; i++) {
+          let sum = array1[i] + array2[i];
+          virtualArray.push(sum);
+        }
+        console.log(`[${array1}], [${array2}] => [${virtualArray}] `);
+      }
+
+      addArrays([1, 1, 2], [1, 1, 3]);
+      addArrays([1, 2, 3], [4, 5, 6]);
     </script>
   </body>
 </html>
