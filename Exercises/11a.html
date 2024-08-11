@@ -157,6 +157,7 @@
       countPositive([-2, 3, -5, 7, 10]);
       */
 
+      /*
       // Create a function that takes an array of numbers and returns an object with minimum and maximum numbers in the array. Do not use Math.min
 
       function minMax(nums) {
@@ -184,6 +185,28 @@
 
       console.log(minMax([]));
       console.log(minMax([3]));
+      */
+
+      // Create a function that takes an array of strings and returns an object with how many times each string appeared.
+
+      function countWords(words) {
+        const result = {};
+
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+        return result;
+      }
+
+      console.log(
+        countWords(["apple", "grape", "apple", "coffee", "grape", "apple"])
+      );
     </script>
   </body>
 </html>
