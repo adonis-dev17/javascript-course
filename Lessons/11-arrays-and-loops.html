@@ -8,89 +8,107 @@
   <body>
     <script>
       /*
-      const myArray = [10, 20, 30];
-      console.log(myArray);
+            const myArray = [10, 20, 30];
+            console.log(myArray);
 
-      console.log(myArray[0]);
-      myArray[0] = 99;
-      console.log(myArray);
+            console.log(myArray[0]);
+            myArray[0] = 99;
+            console.log(myArray);
 
-      [1, "hello", true, { name: "socks" }, [1, 2]];
-      console.log(typeof [1, 2]);
-      console.log(Array.isArray([1, 2]));
+            [1, "hello", true, { name: "socks" }, [1, 2]];
+            console.log(typeof [1, 2]);
+            console.log(Array.isArray([1, 2]));
 
-      console.log(myArray.length);
+            console.log(myArray.length);
 
-      myArray.push(100);
-      console.log(myArray);
+            myArray.push(100);
+            console.log(myArray);
 
-      myArray.splice(0, 1);
-      console.log(myArray);
+            myArray.splice(0, 1);
+            console.log(myArray);
 
 
-      let i = 1;
+            let i = 1;
 
-      while (i <= 5) {
-        console.log(i);
-        i++;
-      }
+            while (i <= 5) {
+              console.log(i);
+              i++;
+            }
 
-      for (let i = 1; i <= 5; i++) {
-        console.log(i);
-      }
+            for (let i = 1; i <= 5; i++) {
+              console.log(i);
+            }
 
-      let randomNumber = 0;
+            let randomNumber = 0;
 
-      while (randomNumber < 0.5) {
-        randomNumber = Math.random();
-      }
-      console.log(randomNumber);
-      */
+            while (randomNumber < 0.5) {
+              randomNumber = Math.random();
+            }
+            console.log(randomNumber);
+            */
       /*
-      //This is called looping through an array
-      const todo = ["make a dinner", "wash clothes", "practice JavaScript"];
+            //This is called looping through an array
+            const todo = ["make a dinner", "wash clothes", "practice JavaScript"];
 
-      for (let i = 0; i < todo.length; i++) {
-        const value = todo[i];
-        console.log(value);
-      }
-      */
+            for (let i = 0; i < todo.length; i++) {
+              const value = todo[i];
+              console.log(value);
+            }
+            */
       /*
-      //This is an accumulator pattern technique
-      const nums = [1, 1, 3];
-      let total = 0; //total is an accumulator variable
+            //This is an accumulator pattern technique
+            const nums = [1, 1, 3];
+            let total = 0; //total is an accumulator variable
 
-      for (let i = 0; i < nums.length; i++) {
-        const num = nums[i];
-        total += num;
-      }
-      console.log(total);
-      */
+            for (let i = 0; i < nums.length; i++) {
+              const num = nums[i];
+              total += num;
+            }
+            console.log(total);
+            */
 
       //Create a function that takes an array of numbers and returns an object with minimum and maximum numbers in the array. Do not use Math.min
 
-      function minMax(nums) {
-        const result = {
-          min: nums[0],
-          max: nums[0]
-        };
+      //function minMax(nums) {
+      //  const result = {
+      //    min: nums[0],
+      //    max: nums[0]
+      //  };
+      //
+      //  for (let i = 0; i < nums.length; i++) {
+      //    let value = nums[i];
+      //
+      //    if (value < result.min) {
+      //      result.min = value;
+      //    }
+      //
+      //    if (value > result.max) {
+      //      result.max = value;
+      //    }
+      //  }
+      //  return result;
+      //}
+      //
+      //console.log(minMax([1, 2, -1, 4]));
+      //console.log(minMax([0, -5, 5, 4, -4]));
 
-        for (let i = 0; i < nums.length; i++) {
-          let value = nums[i];
+      // Create a function that takes an array of strings and returns an object with how many times each string appeared.
+      function countWords(words) {
+        const result = {};
 
-          if (value < result.min) {
-            result.min = value;
-          }
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
 
-          if (value > result.max) {
-            result.max = value;
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
           }
         }
         return result;
       }
 
-      console.log(minMax([1, 2, -1, 4]));
-      console.log(minMax([0, -5, 5, 4, -4]));
+      console.log(countWords(["blue", "red", "white", "red", "red", "white"]));
     </script>
   </body>
 </html>

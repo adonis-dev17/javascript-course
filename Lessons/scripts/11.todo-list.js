@@ -9,7 +9,10 @@ function renderTodoList() {
     const todo = todoList[i];
 
     // this is generating html technique
-    const html = `<p>${todo}</p>`;
+    const html = `<p>
+        ${todo}
+        <button>Delete</button>
+      </p>`;
     todoListHTML += html;
   }
   console.log(todoListHTML);
