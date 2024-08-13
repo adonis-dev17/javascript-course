@@ -16,8 +16,13 @@ function renderTodoList() {
 
   for (let i = 0; i < todoList.length; i++) {
     const todoObject = todoList[i];
-    const name = todoObject.name;
-    const dueDate = todoObject.dueDate;
+
+    // const name = todoObject.name;
+    // const dueDate = todoObject.dueDate;
+
+    //change those above using Destructuring technique
+
+    const { name, dueDate } = todoObject;
 
     // this is generating html technique
     const html = `
@@ -40,7 +45,18 @@ function addTodo() {
 
   const name = inputElement.value;
 
-  todoList.push(name);
+  const dateInputElement = document.querySelector(".js-due-date-input");
+
+  const dueDate = dateInputElement.value;
+
+  todoList.push({
+    // name: name,
+    // dueDate: dueDate,
+    //make those above using a shorthand property
+
+    name,
+    dueDate,
+  });
   console.log(todoList);
 
   inputElement.value = "";
