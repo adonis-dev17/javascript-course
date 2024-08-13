@@ -1,4 +1,13 @@
-const todoList = ["make lunch", "study Javascript", "practice interview"];
+const todoList = [
+  {
+    name: "make dinner",
+    dueDate: "2024-08-13",
+  },
+  {
+    name: "wash dishes",
+    dueDate: "2024-08-13",
+  },
+];
 
 renderTodoList();
 
@@ -6,12 +15,18 @@ function renderTodoList() {
   let todoListHTML = "";
 
   for (let i = 0; i < todoList.length; i++) {
-    const todo = todoList[i];
+    const todoObject = todoList[i];
+    const name = todoObject.name;
+    const dueDate = todoObject.dueDate;
 
     // this is generating html technique
-    const html = `<p>
-        ${todo}
-        <button>Delete</button>
+    const html = `
+    <p>
+        ${name} ${dueDate}
+        <button onclick="
+        todoList.splice(${i}, 1);
+        renderTodoList();
+        ">Delete</button>
       </p>`;
     todoListHTML += html;
   }
