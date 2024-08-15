@@ -26,13 +26,13 @@ function renderTodoList() {
 
     // this is generating html technique
     const html = `
-    <p>
-        ${name} ${dueDate}
-        <button onclick="
-        todoList.splice(${i}, 1);
-        renderTodoList();
-        ">Delete</button>
-      </p>`;
+    <div>${name}</div>
+    <div>${dueDate}</div>  
+    <button onclick="
+      todoList.splice(${i}, 1);
+      renderTodoList();
+    " class="delete-todo-button">Delete</button>
+    `;
     todoListHTML += html;
   }
 
