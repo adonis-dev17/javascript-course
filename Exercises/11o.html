@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops - Exercises</title>
+  </head>
+  <body>
+    <script>
+      //11o. Loop over the array of strings and check if the string 'search' is inside the array. If it is console.log 'searrch' in the array. If not console.log(-1);
+      /*
+      function checkSearch(array1) {
+        for (let i = 0; i < array1.length; i++) {
+          let check = array1[i];
+          if (check === "search") {
+            console.log(i);
+          } else {
+            console.log(-1);
+          }
+        }
+      }
+
+      checkSearch([
+        "hello",
+        "search",
+        "world",
+        "kill",
+        "bill",
+        "search",
+        "good",
+      ]);
+
+      checkSearch(["not", "found"]);
+*/
+      //11p. Modify 11o, that it will console.log() the index of the first appearance
+
+      function checkSearch(array1) {
+        for (let i = 0; i < array1.length; i++) {
+          let check = array1[i];
+          if (check === "search") {
+            console.log(i);
+            break;
+          } else {
+            console.log(-1);
+          }
+        }
+      }
+
+      checkSearch([
+        "hello",
+        "search",
+        "world",
+        "kill",
+        "bill",
+        "search",
+        "good",
+      ]);
+
+      checkSearch(["not", "found"]);
+    </script>
+  </body>
+</html>
