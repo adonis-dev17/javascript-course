@@ -61,6 +61,8 @@
             checkSearch(["not", "found"]);
 
           */
+
+      /*   
       //11q.Create a function that searches an array for a string and returns the index of the first occurebces. If it doesn't exist, return -1.
 
       function findingIndex(array, word) {
@@ -78,6 +80,38 @@
 
       findingIndex(["green", "blue", "orange", "purple", "pink"], "purple");
       findingIndex(["green", "blue", "orange", "purple", "pink"], "brown");
+      */
+
+      //Create a function tahta takes array of strings and returns an array where the string 'egg' is removed.
+
+      function removeEgg(foods) {
+        let noEgg = [];
+
+        for (let i = 0; i < foods.length; i++) {
+          const foodName = foods[i];
+
+          if (foodName === "egg") {
+            continue;
+          } else {
+            noEgg.push(foodName);
+          }
+        }
+        console.log(noEgg);
+      }
+
+      removeEgg([
+        "egg",
+        "bacon",
+        "egg",
+        "lechon",
+        "egg",
+        "ham",
+        "egg",
+        "egg",
+        "fried chicken",
+        "porkchop",
+        "egg",
+      ]);
     </script>
   </body>
 </html>
