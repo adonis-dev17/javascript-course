@@ -9,35 +9,65 @@
     <script>
       //11o. Loop over the array of strings and check if the string 'search' is inside the array. If it is console.log 'searrch' in the array. If not console.log(-1);
       /*
-      function checkSearch(array1) {
-        for (let i = 0; i < array1.length; i++) {
-          let check = array1[i];
-          if (check === "search") {
-            console.log(i);
-          } else {
-            console.log(-1);
-          }
-        }
-      }
+            function checkSearch(array1) {
+              for (let i = 0; i < array1.length; i++) {
+                let check = array1[i];
+                if (check === "search") {
+                  console.log(i);
+                } else {
+                  console.log(-1);
+                }
+              }
+            }
 
-      checkSearch([
-        "hello",
-        "search",
-        "world",
-        "kill",
-        "bill",
-        "search",
-        "good",
-      ]);
+            checkSearch([
+              "hello",
+              "search",
+              "world",
+              "kill",
+              "bill",
+              "search",
+              "good",
+            ]);
 
-      checkSearch(["not", "found"]);
-*/
-      //11p. Modify 11o, that it will console.log() the index of the first appearance
+            checkSearch(["not", "found"]);
+      */
 
-      function checkSearch(array1) {
-        for (let i = 0; i < array1.length; i++) {
-          let check = array1[i];
-          if (check === "search") {
+      /*
+            //11p. Modify 11o, that it will console.log() the index of the first appearance
+
+            function checkSearch(array1) {
+              for (let i = 0; i < array1.length; i++) {
+                let check = array1[i];
+                if (check === "search") {
+                  console.log(i);
+                  break;
+                } else {
+                  console.log(-1);
+                }
+              }
+            }
+
+            checkSearch([
+              "hello",
+              "search",
+              "world",
+              "kill",
+              "bill",
+              "search",
+              "good",
+            ]);
+
+            checkSearch(["not", "found"]);
+
+          */
+      //11q.Create a function that searches an array for a string and returns the index of the first occurebces. If it doesn't exist, return -1.
+
+      function findingIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          const arr1 = array[i];
+
+          if (arr1 === word) {
             console.log(i);
             break;
           } else {
@@ -46,17 +76,8 @@
         }
       }
 
-      checkSearch([
-        "hello",
-        "search",
-        "world",
-        "kill",
-        "bill",
-        "search",
-        "good",
-      ]);
-
-      checkSearch(["not", "found"]);
+      findingIndex(["green", "blue", "orange", "purple", "pink"], "purple");
+      findingIndex(["green", "blue", "orange", "purple", "pink"], "brown");
     </script>
   </body>
 </html>
