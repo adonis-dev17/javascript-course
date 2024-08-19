@@ -62,7 +62,7 @@
 
           */
 
-      /*   
+      /*
       //11q.Create a function that searches an array for a string and returns the index of the first occurebces. If it doesn't exist, return -1.
 
       function findingIndex(array, word) {
@@ -115,8 +115,8 @@
       ]);
       */
 
+      /*
       //11s. Update 11r to remove only the first two eggs.
-
       function remove2EggsOnly(foods) {
         let noEgg = [];
         let eggCount = 0;
@@ -145,6 +145,41 @@
         "egg",
         "fried chicken",
         "porkchop",
+        "egg",
+      ]);
+      */
+
+      //11t. Use .reverse(), update exercise 11s to only remove the last two eggs from the array.
+      function remove2EggsOnly(foods) {
+        let noEgg = [];
+        let eggCount = 0;
+        foods.reverse();
+        for (let i = 0; i < foods.length; i++) {
+          const foodName = foods[i];
+
+          if (foodName === "egg" && eggCount <= 1) {
+            eggCount++;
+            continue;
+          } else {
+            noEgg.push(foodName);
+          }
+        }
+        console.log(noEgg.reverse());
+      }
+
+      remove2EggsOnly([
+        "egg",
+        "bacon",
+        "egg",
+        "lechon",
+        "egg",
+        "ham",
+        "egg",
+        "egg",
+        "fried chicken",
+        "porkchop",
+        "egg",
+        "fish",
         "egg",
       ]);
     </script>
