@@ -153,21 +153,21 @@
       function remove2EggsOnly(foods) {
         let noEgg = [];
         let eggCount = 0;
-        foods.reverse();
-        for (let i = 0; i < foods.length; i++) {
-          const foodName = foods[i];
+        const reversedFoods = foods.slice().reverse();
+
+        for (let i = 0; i < reversedFoods.length; i++) {
+          const foodName = reversedFoods[i];
 
           if (foodName === "egg" && eggCount <= 1) {
             eggCount++;
             continue;
-          } else {
-            noEgg.push(foodName);
           }
+          noEgg.push(reversedFoods[i]);
         }
-        console.log(noEgg.reverse());
+        return noEgg.reverse();
       }
 
-      remove2EggsOnly([
+      const foods = [
         "egg",
         "bacon",
         "egg",
@@ -181,7 +181,9 @@
         "egg",
         "fish",
         "egg",
-      ]);
+      ];
+      console.log(remove2EggsOnly(foods));
+      console.log(foods);
     </script>
   </body>
 </html>
