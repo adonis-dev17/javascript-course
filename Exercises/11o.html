@@ -82,7 +82,8 @@
       findingIndex(["green", "blue", "orange", "purple", "pink"], "brown");
       */
 
-      //Create a function tahta takes array of strings and returns an array where the string 'egg' is removed.
+      /*
+      //11r. Create a function tahta takes array of strings and returns an array where the string 'egg' is removed.
 
       function removeEgg(foods) {
         let noEgg = [];
@@ -100,6 +101,40 @@
       }
 
       removeEgg([
+        "egg",
+        "bacon",
+        "egg",
+        "lechon",
+        "egg",
+        "ham",
+        "egg",
+        "egg",
+        "fried chicken",
+        "porkchop",
+        "egg",
+      ]);
+      */
+
+      //11s. Update 11r to remove only the first two eggs.
+
+      function remove2EggsOnly(foods) {
+        let noEgg = [];
+        let eggCount = 0;
+        for (let i = 0; i < foods.length; i++) {
+          const foodName = foods[i];
+
+          if (foodName === "egg" && eggCount <= 2) {
+            eggCount++;
+            continue;
+          } else {
+            noEgg.push(foodName);
+            eggCount++;
+          }
+        }
+        console.log(noEgg);
+      }
+
+      remove2EggsOnly([
         "egg",
         "bacon",
         "egg",
