@@ -205,7 +205,7 @@
 
       */
 
-      //11w.Create a function that searches an array for a string and returns the index of the first occurences. If it doesn't exist, return -1.
+      //11w.Create a copy of exercise 11q, below it create a function unique(array) that takes an array of strings and returns an array where each strings only appears once.
 
       function returnIndex (array, word) {
 
@@ -219,8 +219,21 @@
         return -1;
       }
 
-      console.log(returnIndex(['red', 'blue', 'green', 'red'], 'green'));
-      console.log(returnIndex(['red', 'blue', 'green', 'red'], 'pink'));
+      function unique(array) {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+          const word = array[i];
+
+          if (returnIndex(result, word) === -1) {
+            result.push(word);
+          }
+
+        }
+        return result;
+      }
+
+      console.log(unique(['red', 'blue', 'green', 'red']));
+      console.log(unique(['red', 'blue', 'green', 'red', 'pink', 'pink', 'white', 'green']));
     </script>
   </body>
 </html>
