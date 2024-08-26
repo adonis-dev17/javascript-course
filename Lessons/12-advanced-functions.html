@@ -47,6 +47,16 @@
         console.log(param);
       }
       display(2);
+
+      //6. Passing a function into another function
+
+      function run(param) {
+        param();
+      }
+
+      run(function () {
+        console.log("Hello4");
+      });
     </script>
   </body>
 </html>
