@@ -20,6 +20,22 @@
       console.log(function1); //shows the content of variable
       console.log(typeof function1); //shows the type which is a function
       function1(); // calling a variable as a function
+
+      // 3. Anonymous Function - can delete the function name
+      const function2 = function () {
+        console.log("hello1");
+      };
+
+      // 4. Add function in an Object
+
+      const object1 = {
+        num: 2,
+        fun: function greeting() {
+          console.log("Hello3");
+        },
+      };
+
+      object1.fun();
     </script>
   </body>
 </html>
