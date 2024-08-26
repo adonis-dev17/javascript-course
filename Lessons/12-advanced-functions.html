@@ -7,10 +7,19 @@
   </head>
   <body>
     <script>
+      // 1. Declaring a function
       function greeting() {
         console.log("Hello");
       }
-      greeting();
+      greeting(); // this is called calling the function or running the function
+
+      // 2. Assigning a function to a variable
+      const function1 = function greeting1() {
+        console.log("hello1");
+      };
+      console.log(function1); //shows the content of variable
+      console.log(typeof function1); //shows the type which is a function
+      function1(); // calling a variable as a function
     </script>
   </body>
 </html>
