@@ -29,6 +29,7 @@
       const product2 = {
         name: "shirt",
         "delivery-time": "1 day",
+        // nested objects
         rating: {
           stars: 4.5,
           count: 87,
@@ -47,6 +48,20 @@
 
       console.log(product2.rating.count);
       product2.fun();
+
+      console.log(typeof console);
+      // console.log is a method, same with Math.random()
+      console.log(typeof console.log);
+
+      // 2 Built-in Objects: JSON and localStorage
+      console.log(JSON.stringify(product2));
+      // JSON is a string
+      console.log(typeof JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+
+      // JSON.parse will JSON back into an object
+      console.log(JSON.parse(jsonString));
     </script>
   </body>
 </html>
