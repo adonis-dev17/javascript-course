@@ -38,16 +38,22 @@
       Reset Score
     </button>
     <script>
-      let score = JSON.parse(localStorage.getItem("score"));
+      // Use shortcut || instead of (score === null)
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
 
-      // Use shortcut !score instead of (score === null)
+      /*
       if (!score) {
         score = {
-          wins: 0,
-          losses: 0,
-          ties: 0,
-        };
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
       }
+      */
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
