@@ -106,6 +106,34 @@
       console.log(object3 === object1);
       //But object2 has the same reference with object1
       console.log(object2 === object1);
+      //So remember we are comparing the references, not the values inside
+
+      // Object Shortcuts
+      const object4 = {
+        message: "Good job",
+        price: 7.99,
+      };
+      //const message = object.message;
+      // if we have the same name for variable we use Destructuring technique
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      // Shorthand Property and Shorthand method
+      const object5 = {
+        //message: message,
+        //if they have the same name we can just use message as a shorthand for message: message, this is called Shorthand property
+        message,
+        // method: function function1() {
+        //   console.log("method");
+        // },
+        // the Shorthand method
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(object5);
+      object5.method();
     </script>
   </body>
 </html>
