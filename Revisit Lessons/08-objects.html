@@ -26,6 +26,8 @@
        delete product.newProperty;
        console.log(product);
        */
+
+      /*
       const product2 = {
         name: "shirt",
         "delivery-time": "1 day",
@@ -62,6 +64,35 @@
 
       // JSON.parse will JSON back into an object
       console.log(JSON.parse(jsonString));
+
+      const testObject = {
+        number: 1,
+        string: "heya",
+        func: function function2() {
+          console.log("hello world");
+        },
+      };
+
+      console.log(testObject.number);
+      console.log(testObject.string);
+      testObject.func();
+
+      console.log(JSON.stringify(testObject));
+      const jString = JSON.stringify(testObject);
+
+      console.log(JSON.parse(jString));
+      */
+
+      // Autoboxing
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      // Object as reference
+
+      const object1 = {
+        message: "hello",
+      };
+      const object2 = object1;
     </script>
   </body>
 </html>
