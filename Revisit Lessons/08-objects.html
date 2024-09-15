@@ -93,6 +93,19 @@
         message: "hello",
       };
       const object2 = object1;
+
+      // It will also change the message in object2 because we change the reference to "Good job"
+      object1.message = "Good job";
+      console.log(object1);
+      console.log(object2);
+
+      //Even we create the same message for object 3, they are not equeal to each other even they have the same values
+      const object3 = {
+        message: "Good job",
+      };
+      console.log(object3 === object1);
+      //But object2 has the same reference with object1
+      console.log(object2 === object1);
     </script>
   </body>
 </html>
