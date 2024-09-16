@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <p>Simple Calculator</p>
+    <!-- first set of buttons put inside the p -->
+    <p>
+      <button onclick="console.log(`${calculation += 1}`)">1</button>
+      <button onclick="console.log(`${calculation += 2}`)">2</button>
+      <button onclick="console.log(`${calculation += 3}`)">3</button>
+      <button onclick="console.log(`${calculation += ' + '}`)">+</button>
+    </p>
+
+    <!-- second set of buttons put inside the p -->
+    <p>
+      <button onclick="console.log(`${calculation += 4}`)">4</button>
+      <button onclick="console.log(`${calculation += 5}`)">5</button>
+      <button onclick="console.log(`${calculation += 6}`)">6</button>
+      <button onclick="console.log(`${calculation += ' - '}`)">-</button>
+    </p>
+
+    <!-- third set of buttons put inside the p -->
+    <p>
+      <button onclick="console.log(`${calculation += 7}`)">7</button>
+      <button onclick="console.log(`${calculation += 8}`)">8</button>
+      <button onclick="console.log(`${calculation += 9}`)">9</button>
+      <button onclick="console.log(`${calculation += ' * '}`)">*</button>
+    </p>
+
+    <!-- fourth set of buttons put inside the p -->
+    <p>
+      <button onclick="console.log(`${calculation += 0}`)">0</button>
+      <button onclick="console.log(`${calculation += '.'}`)">.</button>
+
+      <button onclick="console.log(`${calculation = eval(calculation)}`)">
+        =
+      </button>
+      <button onclick="console.log(`${calculation += ' / '}`)">/</button>
+    </p>
+
+    <!-- fourth set of buttons put inside the p -->
+    <p>
+      <button
+        onclick="showMemory();
+      "
+      >
+        MR
+      </button>
+      <button
+        onclick="saveMemory() 
+        
+      "
+      >
+        M+
+      </button>
+      <button
+        onclick="flushMemory();
+      "
+      >
+        M-
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+        calculation = '';
+        console.log(`Cleared.`)"
+      >
+        clear
+      </button>
+    </p>
+
+    <script>
+      let calculation = JSON.parse(localStorage.getItem("calculation")) || 0;
+      console.log(calculation);
+
+      function saveMemory() {
+        localStorage.setItem("calculation", JSON.stringify(calculation));
+      }
+
+      function showMemory() {
+        let calculation = JSON.parse(localStorage.getItem("calculation")) || 0;
+        console.log(calculation);
+      }
+
+      function flushMemory() {
+        localStorage.removeItem("calculation");
+      }
+    </script>
+  </body>
+</html>
