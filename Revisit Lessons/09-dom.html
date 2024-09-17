@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-button">Second Button</button>
+    <script>
+      console.log(document.querySelector("button").innerHTML);
+      document.querySelector("button").innerHTML = "Changed!";
+      console.log(document.querySelector(".js-button"));
+      document.querySelector(".js-button").innerHTML = "Button 2";
+
+      //Note all elements are Objects w/c means they can be saved inside a variable
+      const buttonElement = document.querySelector(".js-button");
+
+      console.log(buttonElement);
+
+      // this code replaces the body with button to 'hello'
+      // document.body.innerHTML = "hello";
+
+      //this code replaces title DOM to 'Good job!'
+      // document.title = "Good job!";
+      /*
+      console.log(document.title);
+      document.title = "Changed";
+
+      console.log(document.body);
+      console.log(typeof document.body);
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = "<button>Good job!</button>";
+      */
+    </script>
+  </body>
+</html>
