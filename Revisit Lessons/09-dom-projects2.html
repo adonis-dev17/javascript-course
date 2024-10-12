@@ -14,7 +14,17 @@
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
-    <input class="js-cost-of-order" type="text" placeholder="Cost of order" />
+    <input
+      class="js-cost-of-order"
+      type="text"
+      placeholder="Cost of order"
+      onkeydown="
+      if (event.key === 'Enter') {
+        console.log(event.key);
+        calculate();
+      }
+    "
+    />
     <button
       class="js-calculate"
       onclick="
