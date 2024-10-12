@@ -60,7 +60,48 @@
     </button>
     <p class="js-displayname"></p>
 
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input
+      class="js-cost-of-order"
+      type="text"
+      placeholder="Cost of order"
+      onkeydown="
+        handleCostOnKeyDown(event);
+    "
+    />
+    <button
+      class="js-calculate"
+      onclick="
+        calculate();
+    "
+    >
+      Calcuulate
+    </button>
+    <p class="js-total-cost"></p>
+
     <script>
+      function handleCostOnKeyDown(event) {
+        if (event.key === "Enter") {
+          calculate();
+        }
+      }
+
+      function calculate() {
+        let inputCost = document.querySelector(".js-cost-of-order");
+        let totalCost = document.querySelector(".js-total-cost");
+
+        if (inputCost.value <= 0) {
+          totalCost.innerHTML = "This is not a valid input";
+        } else if (inputCost.value < 40) {
+          totalCost.innerHTML =
+            Math.floor((Number(inputCost.value) + 10) * 100) / 100;
+        } else if (inputCost.value >= 40) {
+          totalCost.innerHTML = Number(inputCost.value);
+        }
+      }
+
       function eventOnKeyDown(event) {
         if (event.key === "Enter") {
           displayName();
