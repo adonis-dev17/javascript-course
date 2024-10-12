@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9a Exercises</title>
+  </head>
+  <body>
+    <button
+      class="js-9a-button"
+      onclick="
+        displayButton();
+      "
+    >
+      9a
+    </button>
+
+    <button
+      class="js-9b-button"
+      onclick="
+      display9bButton();
+    "
+    >
+      9b
+    </button>
+
+    <button
+      class="js-heads"
+      onclick="
+      youChose('heads');
+    "
+    >
+      heads
+    </button>
+    <button
+      class="js-tails"
+      onclick="
+      youChose('tails');
+    "
+    >
+      tails
+    </button>
+    <p class="js-heads-tails"></p>
+
+    <script>
+      function youChose(chose) {
+        let displayHeadsOrTails = document.querySelector(".js-heads-tails");
+
+        if (chose === "heads") {
+          displayHeadsOrTails.innerHTML = "You chose: heads";
+        } else {
+          displayHeadsOrTails.innerHTML = "You chose: tails";
+        }
+      }
+
+      function display9bButton() {
+        let display9bDone = document.querySelector(".js-9b-button");
+
+        if (display9bDone.innerText === "9b") {
+          display9bDone.innerText = "9b done!";
+        } else {
+          display9bDone.innerText = "9b";
+        }
+      }
+
+      function displayButton() {
+        console.log(document.querySelector(".js-9a-button").innerHTML);
+      }
+    </script>
+  </body>
+</html>
