@@ -18,16 +18,7 @@
     <button
       class="js-calculate"
       onclick="
-      let inputCost = document.querySelector('.js-cost-of-order');
-      let totalCost = document.querySelector('.js-total-cost');
-
-      if (inputCost.value <= 0) {
-        totalCost.innerHTML = 'This is not a valid input';
-      }else if (inputCost.value < 40) {
-        totalCost.innerHTML = Number(inputCost.value) + 10;
-      }else if (inputCost.value >= 40){
-        totalCost.innerHTML = Number(inputCost.value);
-      }
+        calculate();
     "
     >
       Calcuulate
@@ -35,6 +26,19 @@
     <p class="js-total-cost"></p>
 
     <script>
+      function calculate() {
+        let inputCost = document.querySelector(".js-cost-of-order");
+        let totalCost = document.querySelector(".js-total-cost");
+
+        if (inputCost.value <= 0) {
+          totalCost.innerHTML = "This is not a valid input";
+        } else if (inputCost.value < 40) {
+          totalCost.innerHTML = Number(inputCost.value) + 10;
+        } else if (inputCost.value >= 40) {
+          totalCost.innerHTML = Number(inputCost.value);
+        }
+      }
+
       function subscribeButton() {
         let subs = document.querySelector(".js-subscribeButton");
 
