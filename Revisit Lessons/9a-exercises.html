@@ -81,7 +81,24 @@
     </button>
     <p class="js-total-cost"></p>
 
+    <input
+      type="text"
+      placeholder="type"
+      class="js-input-text"
+      onkeyup="
+      updateText();
+    "
+    />
+    <p class="js-update-text"></p>
+
     <script>
+      function updateText() {
+        let update = document.querySelector(".js-input-text");
+        let displayUpdate = document.querySelector(".js-update-text");
+
+        displayUpdate.innerText = update.value;
+      }
+
       function handleCostOnKeyDown(event) {
         if (event.key === "Enter") {
           calculate();
