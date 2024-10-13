@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button
+      class="js-showQ"
+      onclick="
+        displayQ();
+      "
+    >
+      Show Quantity
+    </button>
+    <button class="js-add1" onclick="manageQ(1);">Add to Cart</button>
+    <button class="js-add2" onclick="manageQ(2);">+2</button>
+    <button class="js-add3" onclick="manageQ(3);">+3</button>
+    <button class="js-add4" onclick="manageQ(4);">+4</button>
+    <button class="js-add5" onclick="manageQ(5);">+5</button>
+    <button class="js-minus1" onclick="manageQ(-1);">Remove from Cart</button>
+    <button class="js-minus2" onclick="manageQ(-2);">-2</button>
+    <button class="js-minus3" onclick="manageQ(-3);">-3</button>
+    <button class="js-resetQ" onclick="manageQ(0);">Reset Cart</button>
+
+    <p class="js-displayQ"></p>
+
+    <script>
+      let cartQuantity = 0;
+
+      function displayQ() {
+        let showQ = document.querySelector(".js-displayQ");
+
+        showQ.innerText = `Cart quantity: ${cartQuantity}
+      `;
+      }
+
+      function manageQ(amount) {
+        if (amount === 0) {
+          cartQuantity = 0;
+        }
+
+        cartQuantity += amount;
+
+        if (cartQuantity < 0) {
+          cartQuantity = 0;
+        }
+
+        displayQ();
+
+        // let showQ = document.querySelector(".js-showQ");
+        // let add1 = document.querySelector(".js-add1");
+        // let add2 = document.querySelector(".js-add2");
+        // let add3 = document.querySelector(".js-add3");
+        // let add4 = document.querySelector(".js-add4");
+        // let add5 = document.querySelector(".js-add5");
+        // let minus1 = document.querySelector(".js-minus1");
+        // let minus2 = document.querySelector(".js-minus2");
+        // let minus3 = document.querySelector(".js-minus3");
+        // let resetQ = document.querySelector(".js-resetQ");
+
+        // if (showQ) {
+        //   displayQ();
+        // } else if (add1) {
+        //   ++cartQuantity;
+        //   displayQ();
+        // } else if (add2) {
+        //   cartQuantity += 2;
+        //   displayQ();
+        // } else if (add3) {
+        //   cartQuantity += 3;
+        //   displayQ();
+        // } else if (add4) {
+        //   cartQuantity += 4;
+        //   displayQ();
+        // } else if (add5) {
+        //   cartQuantity += 5;
+        //   displayQ();
+        // } else if (minus1) {
+        //   --cartQuantity;
+        //   displayQ();
+        // } else if (minus2) {
+        //   cartQuantity -= 2;
+        //   displayQ();
+        // } else if (minus3) {
+        //   cartQuantity -= 3;
+        //   displayQ();
+        // } else if (resetQ) {
+        //   cartQuantity = 0;
+        //   displayQ();
+        // }
+      }
+    </script>
+  </body>
+</html>
