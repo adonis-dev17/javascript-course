@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <p>Simple Calculator</p>
+
+    <textarea class="js-display" rows="1" cols="15"></textarea>
+
+    <p>
+      <button onclick="calculate(1)">1</button>
+      <button onclick="calculate(2)">2</button>
+      <button onclick="calculate(3)">3</button>
+      <button onclick="calculate('+')">+</button>
+    </p>
+
+    <p>
+      <button onclick="calculate(4)">4</button>
+      <button onclick="calculate(5)">5</button>
+      <button onclick="calculate(6)">6</button>
+      <button onclick="calculate('-')">-</button>
+    </p>
+
+    <p>
+      <button onclick="calculate(7)">7</button>
+      <button onclick="calculate(8)">8</button>
+      <button onclick="calculate(9)">9</button>
+      <button onclick="calculate('*')">*</button>
+    </p>
+
+    <p>
+      <button onclick="calculate(0)">0</button>
+      <button onclick="calculate('.')">.</button>
+      <button onclick="calculate('=')">=</button>
+      <button onclick="calculate('/')">/</button>
+    </p>
+
+    <p>
+      <button onclick="showMemory()">MR</button>
+      <button onclick="saveMemory()">M+</button>
+      <button onclick="flushMemory()">M-</button>
+    </p>
+
+    <p>
+      <button onclick="clearCalculation()">clear</button>
+    </p>
+
+    <script>
+      let calculation = "";
+      let memory = 0;
+
+      display();
+
+      function display() {
+        let show = document.querySelector(".js-display");
+        show.innerText = calculation || "0";
+      }
+
+      function calculate(digit) {
+        if (digit === "=") {
+          try {
+            calculation = eval(calculation).toString(); // Evaluate the expression
+          } catch (error) {
+            calculation = "Error"; // Handle any errors
+          }
+        } else {
+          calculation += digit; // Append the digit or operator
+        }
+        display();
+      }
+
+      function saveMemory() {
+        memory = eval(calculation); // Save the current calculation to memory
+        localStorage.setItem("memory", JSON.stringify(memory));
+      }
+
+      function showMemory() {
+        memory = JSON.parse(localStorage.getItem("memory")) || 0;
+        calculation = memory.toString(); // Set calculation to memory value
+        display(); // Update display with memory value
+      }
+
+      function flushMemory() {
+        localStorage.removeItem("memory");
+        memory = 0; // Reset memory variable
+      }
+
+      function clearCalculation() {
+        calculation = "";
+        display();
+      }
+    </script>
+  </body>
+</html>
