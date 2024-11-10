@@ -7,32 +7,17 @@
   </head>
   <body>
     <button>Hello</button>
-    <button class="js-button">Second button</button>
 
     <script>
-      //  methods
-      console.log(document.querySelector("button"));
-      1;
-      console.log(document.querySelector("button").innerHTML);
-      document.querySelector("button").innerHTML = "Good day!";
+      console.log(document.title);
+      document.title = "Changed";
 
-      console.log(document.querySelector(".js-button"));
+      console.log(document.body);
 
-      const buttonElement = document.querySelector(".js-button");
-      console.log(buttonElement);
-
-      // properties
-      // console.log(document.title);
-      // console.log(document.body);
-
-      // document.title = "Changed!";
-
-      // console.log(document.body.innerHTML);
-
-      // document.body.innerHTML = "<button>Mighty button</button> ";
-
-      // document.body.innerHTML = "Heyo!";
-      // document.title = "Good job!";
+      /*
+      document.body.innerHTML = "Hello";
+      document.title = "Good Job!";
+      */
     </script>
   </body>
 </html>
