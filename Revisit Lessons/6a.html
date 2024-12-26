@@ -9,7 +9,7 @@
     <script>
       /*Create a variable hour and save the current hour of the day using 24-hour format 0-23*/
 
-      let hour = prompt("Enter hour: ");
+      /*let hour = prompt("Enter hour: ");
       const name = "Adonis";
 
       if (+hour >= 6 && +hour <= 12) {
@@ -18,6 +18,22 @@
         console.log(`Good afternoon ${name}`);
       } else {
         console.log(`Goodnight ${name}`);
+      }
+        */
+
+      /*An amusement park that has a discount for children (6years and younger) and seniors (65yrs and older)*/
+
+      let age = prompt(
+        "Welcome to Adonis Amusement Park. Please enter your age: "
+      );
+      if (age <= 0 || age >= 160) {
+        console.log("You're Crazy!");
+      } else if (age <= 6 || age >= 65) {
+        console.log("You have a discount!");
+      } else if (age >= 7 || age <= 64) {
+        console.log(
+          "No Discount. You need to be ages 6 or less or 65 and above."
+        );
       }
     </script>
   </body>
