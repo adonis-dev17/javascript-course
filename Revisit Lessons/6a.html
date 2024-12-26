@@ -10,13 +10,14 @@
       /*Create a variable hour and save the current hour of the day using 24-hour format 0-23*/
 
       let hour = prompt("Enter hour: ");
+      const name = "Adonis";
 
       if (+hour >= 6 && +hour <= 12) {
-        console.log("Good morning!");
+        console.log(`Good morning ${name}`);
       } else if (+hour >= 13 && +hour <= 17) {
-        console.log("Good afternoon!");
+        console.log(`Good afternoon ${name}`);
       } else {
-        console.log("Goodnight!");
+        console.log(`Goodnight ${name}`);
       }
     </script>
   </body>
