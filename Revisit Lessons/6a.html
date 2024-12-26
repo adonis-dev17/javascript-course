@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans and If-Statements Exercises</title>
+  </head>
+  <body>
+    <script>
+      /*Create a variable hour and save the current hour of the day using 24-hour format 0-23*/
+
+      let hour = prompt("Enter hour: ");
+
+      if (+hour >= 6 && +hour <= 12) {
+        console.log("Good morning!");
+      } else if (+hour >= 13 && +hour <= 17) {
+        console.log("Good afternoon!");
+      } else {
+        console.log("Goodnight!");
+      }
+    </script>
+  </body>
+</html>
