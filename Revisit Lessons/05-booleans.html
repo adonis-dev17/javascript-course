@@ -40,7 +40,7 @@
 
       console.log(!true);
       */
-
+      /*
       if (5) {
         console.log("Truthy");
       }
@@ -51,7 +51,23 @@
         console.log("Truthy");
       } else {
         console.log("Falsy");
-      }
+      } */
+
+      const result = 0 ? "1M auras" : "Skibidee";
+
+      console.log(result);
+
+      const message = 5 && "Hello";
+      console.log(message);
+
+      const message2 = 0 || "Goodbye";
+      console.log(message2);
+
+      const message3 = undefined || NaN ? "Superman" : "Witch Hunter";
+      console.log(message3);
+
+      const currency = undefined || "USD";
+      console.log(currency);
     </script>
   </body>
 </html>
