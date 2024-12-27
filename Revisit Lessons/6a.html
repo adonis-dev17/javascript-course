@@ -21,15 +21,23 @@
       }
         */
 
-      /*An amusement park that has a discount for children (6years and younger) and seniors (65yrs and older)*/
+      /*An amusement park that has a discount for children (6years and younger) and seniors (65yrs and older) and if it is holiday*/
 
       let age = prompt(
         "Welcome to Adonis Amusement Park. Please enter your age: "
       );
+
+      let isHoliday = " ";
+
       if (age <= 0 || age >= 160) {
         console.log("You're Crazy!");
       } else if (age <= 6 || age >= 65) {
-        console.log("You have a discount!");
+        isHoliday = prompt("Is it holiday: ");
+        if (isHoliday === "yes") {
+          console.log("It is holiday so No Discount.");
+        } else {
+          console.log("You have a discount!");
+        }
       } else if (age >= 7 || age <= 64) {
         console.log(
           "No Discount. You need to be ages 6 or less or 65 and above."
