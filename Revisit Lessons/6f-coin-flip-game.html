@@ -9,9 +9,8 @@
     <script>
       let randomNumber = Math.random();
       console.log(randomNumber);
-      let result = "";
 
-      randomNumber < 0.5 ? (result = "Heads") : (result = "Tails");
+      const result = randomNumber < 0.5 ? "Heads" : "Tails";
 
       /*
       if (randomNumber < 0.5) {
@@ -23,7 +22,7 @@
 
       let guess = prompt("Guess the coin(Heads/Tails): ");
 
-      guess === result ? console.log("You win!") : console.log("You lose");
+      guess === result ? console.log("You win!") : console.log("You lose!");
 
       /*
       if (guess === result) {
