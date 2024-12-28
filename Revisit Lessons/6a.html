@@ -27,10 +27,14 @@
         "Welcome to Adonis Amusement Park. Please enter your age: "
       );
 
-      let isHoliday = prompt("Holiday (y/n): ");
+      if (age <= 6 || age >= 65) {
+        let isHoliday = prompt("Holiday (y/n): ");
 
-      if ((age <= 6 || age >= 65) && isHoliday === "n") {
-        console.log("You have a Discount");
+        if (isHoliday === "n") {
+          console.log("You have a Discount");
+        } else {
+          console.log("No Discount");
+        }
       } else {
         console.log("No Discount");
       }
