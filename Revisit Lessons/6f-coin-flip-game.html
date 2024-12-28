@@ -10,19 +10,28 @@
       let randomNumber = Math.random();
       console.log(randomNumber);
       let result = "";
+
+      randomNumber < 0.5 ? (result = "Heads") : (result = "Tails");
+
+      /*
       if (randomNumber < 0.5) {
         result = "Heads";
       } else {
         result = "Tails";
       }
+      */
 
       let guess = prompt("Guess the coin(Heads/Tails): ");
 
+      guess === result ? console.log("You win!") : console.log("You lose");
+
+      /*
       if (guess === result) {
         console.log("You win!");
       } else {
         console.log("You lose");
       }
+      */
     </script>
   </body>
 </html>
