@@ -52,26 +52,30 @@
       */
 
       function convertLength(length, from, to) {
-        if (from === "km" && to === "miles") {
+        if (from !== "km" && from !== "miles" && from !== "ft") {
+          return `Invalid unit: ${from}`;
+        } else if (to !== "km" && to !== "miles" && to !== "ft") {
+          return `Invalid unit: ${to}`;
+        } else if (from === "km" && to === "miles") {
           const convertedLength = length / 1.6;
-          return `${convertedLength} miles`;
+          return `${convertedLength} ${to}`;
         } else if (from === "miles" && to === "km") {
           const convertedLength = length * 1.6;
-          return `${convertedLength} km`;
+          return `${convertedLength} ${to}`;
         } else if (from === to) {
           return `${length} ${to}`;
         } else if (from === "miles" && to === "ft") {
           const convertedLength = length * 5280;
-          return `${convertedLength} ft`;
+          return `${convertedLength} ${to}`;
         } else if (from === "ft" && to === "miles") {
           const convertedLength = length / 5280;
-          return `${convertedLength} miles`;
+          return `${convertedLength} ${to}`;
         } else if (from === "km" && to === "ft") {
           const convertedLength = length * 3281;
-          return `${convertedLength} feet`;
+          return `${convertedLength} ${to}`;
         } else if (from === "ft" && to === "km") {
           const convertedLength = length / 3281;
-          return `${convertedLength} km`;
+          return `${convertedLength} ${to}`;
         }
       }
 
@@ -82,6 +86,9 @@
       console.log(convertLength(5, "miles", "km"));
       console.log(convertLength(5, "miles", "ft"));
       console.log(convertLength(5, "km", "ft"));
+      console.log(convertLength(5, "lbs", "lbs"));
+      console.log(convertLength(5, "m", "miles"));
+      console.log(convertLength(5, "km", "in"));
     </script>
   </body>
 </html>
