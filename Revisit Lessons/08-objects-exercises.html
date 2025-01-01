@@ -3,60 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Objects Exercises</title>
+    <title>Rock Paper Scissors</title>
   </head>
   <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+        playGame('rock')
+    "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+        playGame('paper')
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+        playGame('scissors');
+    "
+    >
+      Scissors
+    </button>
     <script>
-      const basketball = {
-        name: "basketball",
-        price: 2095,
-      };
-      console.log(basketball.name);
-      console.log(basketball.price);
+      function playGame(playerMove) {
+        const computerMove = pickComputerMove();
 
-      console.log(basketball.price + 500);
+        let result = "";
 
-      basketball["delivery-time"] = "3 days";
-      console.log(basketball);
-
-      const baseball = {
-        name: "baseball",
-        price: 2005,
-      };
-
-      function comparePrice(product1, product2) {
-        if (product1.price < product2.price) {
-          return product1.name;
-        } else {
-          return product2.name;
+        if (playerMove === "scissors") {
+          if (computerMove === "Rock") {
+            result = "You lose!";
+          } else if (computerMove === "Paper") {
+            result = "You win";
+          } else if (computerMove === "Scissors") {
+            result = "Tie";
+          }
+        } else if (playerMove === "paper") {
+          if (computerMove === "Rock") {
+            result = "You win!";
+          } else if (computerMove === "Paper") {
+            result = "Tie";
+          } else if (computerMove === "Scissors") {
+            result = "You lose!";
+          }
+        } else if (playerMove === "rock") {
+          if (computerMove === "Rock") {
+            result = "Tie";
+          } else if (computerMove === "Paper") {
+            result = "You lose!";
+          } else if (computerMove === "Scissors") {
+            result = "You win!";
+          }
         }
+
+        alert(
+          `Your picked ${playerMove}. Computer picked ${computerMove}. The result is ${result}`
+        );
       }
 
-      console.log(comparePrice(basketball, baseball));
+      function pickComputerMove() {
+        let computerMove = "";
+        const randomMove = Math.random();
 
-      function isSameProduct(product1, product2) {
-        const prod1Name = product1.name;
-        const prod2Name = product2.name;
-        const prod1Price = product1.price;
-        const prod2Price = product2.price;
-
-        if (prod1Name === prod2Name && prod1Price === prod2Price) {
-          return true;
-        } else {
-          return false;
+        if (randomMove >= 0 && randomMove < 1 / 3) {
+          computerMove = "Rock";
+        } else if (randomMove >= 1 / 3 && randomMove < 2 / 3) {
+          computerMove = "Paper";
+        } else if (randomMove >= 2 / 3 && randomMove < 1) {
+          computerMove = "Scissors";
         }
+        return computerMove;
       }
-
-      console.log(isSameProduct(basketball, basketball));
-      console.log(isSameProduct(basketball, baseball));
-
-      console.log("Good Morning".toLowerCase());
-
-      let str = "test";
-      let strRepeat = str.repeat(3);
-      console.log(strRepeat);
-
-      console.log("happy".repeat(5));
     </script>
   </body>
 </html>
