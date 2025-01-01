@@ -22,12 +22,33 @@
       */
 
       function convertToFahrenheit(celsius) {
-        let fahrenheit = (celsius * 9) / 5 + 32;
-        return fahrenheit;
+        return (celsius * 9) / 5 + 32;
       }
 
-      console.log(convertToFahrenheit(25));
+      /*console.log(convertToFahrenheit(25));
       console.log(convertToFahrenheit(36));
+      */
+
+      function convertToCelsius(fahrenheit) {
+        return ((fahrenheit - 32) * 5) / 9;
+      }
+
+      /*console.log(convertToCelsius(77));
+      console.log(convertToCelsius(96.8));
+      */
+
+      function convertTemperature(degrees, unit) {
+        if (unit === "C") {
+          const result = convertToFahrenheit(degrees);
+          return `${result}F`;
+        } else if (unit === "F") {
+          const result = convertToCelsius(degrees);
+          return `${result}C`;
+        }
+      }
+
+      console.log(convertTemperature(25, "C"));
+      console.log(convertTemperature(86, "F"));
     </script>
   </body>
 </html>
